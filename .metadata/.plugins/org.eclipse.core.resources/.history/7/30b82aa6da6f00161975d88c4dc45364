@@ -1,0 +1,49 @@
+package dao.use;
+
+import java.sql.SQLException;
+import java.util.List;
+import dao.common.DbHelper;
+import bean.Comment;
+
+public class CommentDao {
+
+		public class findById extends Comment {
+
+	}
+
+		private DbHelper ct;
+		public CommentDao() throws SQLException{ 
+			ct = new DbHelper();
+		}
+		public void insert(Comment item) throws SQLException{
+			ct.insertAndReturnKey(
+					"INSERT INTO Comment(productId,loginName,comments,rate) VALUES(?,?,?,?)",
+					item.getProductId(),
+					item.getLoginName(),
+					item.getComments(),
+					item.getRate());
+			
+		}
+		public void update(Comment item) throws SQLException{
+			String sql = "UPDATE Comment SET productId=?,loginName=?,comments=?,rate=? WHERE commentId=?";
+			ct.updatePrepareSQL(sql, item.getProductId(),
+					item.getLoginName(),
+					item.getComments(),	
+					item.getRate(),item.getCommentId());
+		}
+		public void delete(Comment item) throws SQLException{
+			String sql = "DELETE FROM Comment WHERE commentId=?";
+			ct.updatePrepareSQL(sql, item.getCommentId());
+		}
+		public List<Comment> query() throws SQLException{
+			String sql = "SELECT * FROM Comment";
+			return ct.find(sql,Comment.class,DbHelper.parseSmap(Comment.class, "commentId", "productId","loginName","comments","rate"));
+		}
+		
+		public List<Comment> findById(int id) throws Exception{
+			String sql = "SELECT * FROM Comment WHERE productId=?";
+			return ct.find(sql, Comment.class, DbHelper.parseSmap(Comment.class, "commentId", "productId","loginName","comments","rate"), id);
+		}
+	}
+
+

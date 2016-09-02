@@ -1,0 +1,54 @@
+package dao.use;
+
+
+import java.sql.SQLException;
+import java.util.List;
+
+import bean.Product;
+import dao.common.DbHelper;
+
+public class ProductDao {
+	private DbHelper ct;
+	public ProductDao() throws SQLException{ 
+		ct = new DbHelper();
+	}
+	public void insert(Product item) throws SQLException{
+		ct.insertAndReturnKey(
+				"INSERT INTO product(productName,categoryName,price,imgurl,productStatus) VALUES(?,?,?,?,?)",
+				item.getProductName(),
+				item.getCategoryName(),
+				item.getPrice(),
+				item.getImgurl(),
+				item.getProductStatus());
+		
+	}
+	public void update(Product item) throws SQLException{
+		String sql = "UPDATE product SET productName=?,categoryName=?,price=?,imgurl=?,productStatus=? WHERE productId=?";
+		System.out.println("dao is good");
+		ct.updatePrepareSQL(sql, item.getProductName(),
+				item.getCategoryName(),
+				item.getPrice(),
+				item.getImgurl(),
+				item.getProductStatus(),
+				item.getProductId());
+	}
+	public void delete(Product item) throws SQLException{
+		String sql = "DELETE FROM product WHERE productId=?";
+		ct.updatePrepareSQL(sql, item.getProductId());
+	}
+	public List<Product> query() throws SQLException{
+		String sql = "SELECT * FROM Product limit 10";
+		return ct.find(sql,Product.class,DbHelper.parseSmap(Product.class, "productId", "productName", "categoryName", "price","imgurl","productStatus"));
+	}
+	
+	public Product findById(int id) throws Exception{
+		String sql = "SELECT * FROM Product WHERE ProductId=?";
+		return ct.get(Product.class,sql,DbHelper.parseSmap(Product.class, "productId", "productName", "categoryName", "price","imgurl","productStatus"),id);
+
+	}
+	public List<Product> fineNew() throws SQLException {
+		String sql = "SELECT * FROM Product WHERE productStatus=?";
+		return ct.find(sql,Product.class,DbHelper.parseSmap(Product.class, "productId", "productName", "categoryName", "price","imgurl","productStatus"),"ÐÂ");
+	}
+}
+

@@ -1,0 +1,60 @@
+package dao.use;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import bean.Order;
+import dao.common.DbHelper;
+
+public class OrderDao {
+	private DbHelper ct;
+	public OrderDao() throws SQLException{ 
+		ct = new DbHelper();
+	}
+	public List<Order> query() throws SQLException {
+		String sql ="SELECT * FROM dorder";
+		return ct.find(sql,Order.class,DbHelper.parseSmap(Order.class, "orderId", "userId", "status", "cost","shipNo","address"));
+	}
+	public Order findById(int orderId) throws SQLException {
+		String sql = "SELECT * FROM orderitem WHERE orderId=?";
+		return ct.get(Order.class,sql,DbHelper.parseSmap(Order.class, "id", "amount", "productId", "orderId"),orderId);
+	}
+	public void update(Order item) throws SQLException {
+		String sql = "UPDATE dorder SET userId=?,status=?,cost=?,shipNo=?,address=? WHERE orderId=?";
+	
+		ct.updatePrepareSQL(sql, item.getUserId(),
+				item.getStatus(),
+				item.getCost(),
+				item.getShipNo(),
+				item.getAddress(),
+				item.getOrderId());
+	}
+	public List<Order>  findNeed(int id) throws SQLException {
+		String sql ="SELECT * FROM dorder WHERE status=? AND userId=?";
+		return ct.find(sql,Order.class,DbHelper.parseSmap(Order.class, "orderId", "userId", "status", "cost","shipNo","address"),1,id);
+	}
+	public int insert(Order item) throws SQLException {
+		// TODO Auto-generated method stub
+		int key=ct.insertAndReturnKey(
+				"INSERT INTO dorder(userId,cost) VALUES (?,?)",item.getUserId(),item.getCost());
+			return key;
+	}
+	public void insertItem(Order orderItem) throws SQLException {
+	 ct.insertAndReturnKey("INSERT INTO orderitem(amount,productId,orderId) Values(?,?,?)", orderItem.getAmount(),orderItem.getProductId(),orderItem.getOrderId());
+		
+	}
+	public void updateStatus(Order order) throws SQLException {
+		String sql = "UPDATE dorder SET status=? WHERE orderId=?";
+		
+		ct.updatePrepareSQL(sql,
+				order.getStatus(),
+				order.getOrderId());
+		
+	}
+	public List<Order> findDone(int id) throws SQLException {
+		String sql ="SELECT * FROM dorder WHERE status=? And userId=?";
+		return ct.find(sql,Order.class,DbHelper.parseSmap(Order.class, "orderId", "userId", "status", "cost","shipNo","address"),2,id);
+	}
+	
+
+}
