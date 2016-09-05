@@ -1,7 +1,6 @@
 /* general styles */
-
 p {
-	font-size: 16px;	
+	font-size: 16px;
 }
 
 h1 {
@@ -40,23 +39,27 @@ form .row {
 .item {
 	
 }
-.copyrights{
-	text-indent:-9999px;
-	height:0;
-	line-height:0;
-	font-size:0;
-	overflow:hidden;
+
+.copyrights {
+	text-indent: -9999px;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+	overflow: hidden;
 }
+
 .item.header {
 	padding-bottom: 50px;
 }
 
-.item.content, .item.portfolio, .item.team, .item.pricing, .item.contact {
+.item.content, .item.portfolio, .item.team, .item.pricing, .item.contact
+	{
 	padding-top: 60px;
 	padding-bottom: 60px;
 }
 
 .item.footer {
+	
 }
 
 .margin-top-100 {
@@ -135,9 +138,7 @@ header .navbar-white a {
 	color: #3D566E;
 }
 
-
 /* videos */
-
 .videoWrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
@@ -145,7 +146,7 @@ header .navbar-white a {
 	height: 0;
 }
 
-.videoWrapper > iframe {
+.videoWrapper>iframe {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -153,7 +154,7 @@ header .navbar-white a {
 	height: 100%;
 }
 
-.videoWrapper > .frameCover {
+.videoWrapper>.frameCover {
 	position: absolute;
 	left: 0px;
 	top: 0px;

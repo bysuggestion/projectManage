@@ -1,2 +1,5 @@
 @CHARSET "UTF-8";
-.plane{background:url(../images/plane.png)}
+
+.plane {
+	background: url(../images/plane.png)
+}

@@ -49,8 +49,8 @@
 							<p class="lead">
 								使用火星在线项目管理网站，是一个在线的轻量级的项目管理软件，在线即可进行项目管理，使用便捷,轻松实现办公网络化、现代化。</p>
 
-							<a href="#" class="btn btn-default btn-lg btn-wide">登陆</a>
-							 <a href="#" class="btn btn-primary btn-lg btn-wide">注册</a>
+							<a href="#" class="btn btn-default btn-lg btn-wide">登陆</a> <a
+								href="#" class="btn btn-primary btn-lg btn-wide">注册</a>
 
 						</div>
 
@@ -72,8 +72,9 @@
 				<div class="row">
 					<div class="col-sm-4 col-xs-12 text-center">
 						<div class="icon-outline">
-							
-							<span><img alt="plane" src="images/plane.png"></span></div>
+
+							<span><img alt="plane" src="images/plane.png"></span>
+						</div>
 						<div class="editContent">
 							<h3>简单、有序的项目协作管理</h3>
 							<p>项目过程、清晰可见</p>
@@ -135,7 +136,7 @@
 								<h4>项目信息管理</h4>
 							</div>
 							<div class="editContent">
-								<p>帮助您便捷的创建项目，管理项目基本信息。 </p>
+								<p>帮助您便捷的创建项目，管理项目基本信息。</p>
 							</div>
 						</div>
 					</div>
@@ -209,7 +210,7 @@
 							</div>
 						</div>
 					</div>
-										<div class="col-md-3 col-sm-12 col-xs-12 ">
+					<div class="col-md-3 col-sm-12 col-xs-12 ">
 						<div class="col-xs-2">
 							<span class="fa fa-bookmark"></span>
 						</div>
@@ -222,7 +223,7 @@
 							</div>
 						</div>
 					</div>
-										<div class="col-md-3 col-sm-12 col-xs-12 ">
+					<div class="col-md-3 col-sm-12 col-xs-12 ">
 						<div class="col-xs-2">
 							<span class="fa fa-bookmark"></span>
 						</div>
@@ -243,7 +244,7 @@
 
 		</section>
 		<!-- // End Content Block 1-9 -->
-	
+
 		<!-- Start Content Block 2-7 -->
 		<section id="content-2-7" class="content-block content-2-7">
 			<div class="container">
@@ -253,9 +254,9 @@
 					<div class="col-sm-12">
 						<div class="underlined-title">
 							<div class="editContent">
-								<h1>我们的成绩 </h1>
+								<h1>我们的成绩</h1>
 							</div>
-						
+
 						</div>
 					</div>
 
@@ -311,8 +312,8 @@
 			<!-- /.container -->
 		</section>
 
-	
-		 <!--// END Content Block 2-7 -->
+
+		<!--// END Content Block 2-7 -->
 		<%/*<div class="item portfolio" id="portfolio2">
 
 			<div class="container">
@@ -518,7 +519,7 @@
 								<li><a href="#fakelink">版本与价格</a></li>
 								<li><a href="#fakelink">免责声明</a></li>
 								<li><a href="#fakelink">官方博客</a></li>
-							
+
 							</ul>
 						</div>
 
@@ -531,7 +532,7 @@
 								<li><a href="#fakelink">管理问题</a></li>
 								<li><a href="#fakelink">使用说明</a></li>
 								<li><a href="#fakelink">其他问题</a></li>
-								
+
 							</ul>
 						</div>
 
@@ -544,7 +545,7 @@
 								<li><a href="#fakelink">在线客服</a></li>
 								<li><a href="#fakelink">公司简介</a></li>
 								<li><a href="#fakelink">合作伙伴</a></li>
-								
+
 							</ul>
 						</div>
 
@@ -559,7 +560,7 @@
 							</ul>
 						</div>
 
-			
+
 					</div>
 				</div>
 

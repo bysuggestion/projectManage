@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Xinglan Wang (bxmn4728@163.com) ">
+<!--pageMeta-->
+
+<!-- Loading Bootstrap -->
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+<!-- Loading Flat UI -->
+<link href="css/flat-ui.css" rel="stylesheet">
+
+<!-- load page css -->
+<link href="css/style.css" rel="stylesheet">
+<link href="css/style.complete.css" rel="stylesheet">
+<link href="css/myStyle.css" rel="stylesheet">
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
+			  <script src="js/html5shiv.js"></script>
+			  <script src="js/respond.min.js"></script>
+			<![endif]-->
+
+<!--headerIncludes-->
+
+<title>火星在线项目管理网</title>
+
+</head>
+<body style="padding:50px">
+	<%@include file="header.jsp" %>
+</body>
+</html>

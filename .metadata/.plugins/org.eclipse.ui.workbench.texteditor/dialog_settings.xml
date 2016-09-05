@@ -3,19 +3,19 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
 		<item value="" key="selection"/>
-		<item value="false" key="casesensitive"/>
+		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Login"/>
+			<item value="menu"/>
+			<item value="navbar"/>
+			<item value="nav"/>
 			<item value="@font-face"/>
 			<item value="web"/>
 			<item value="url"/>
 			<item value="lato"/>
-			<item value="fontawesome-webfont"/>
-			<item value="webfont"/>
-			<item value="font"/>
-			<item value="swich"/>
 		</list>
 		<list key="replacehistory">
 		</list>
